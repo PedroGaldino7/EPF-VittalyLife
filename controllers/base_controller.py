@@ -8,17 +8,19 @@ class BaseController:
 
     def _setup_base_routes(self):
         """Configura rotas básicas comuns a todos os controllers"""
-        self.app.route('/', method='GET', callback=self.home_redirect)
+        self.app.route('/', method='GET', callback=self.homePage)
+        self.app.route('/users', method='GET', callback=self.users_list)
         self.app.route('/helper', method=['GET'], callback=self.helper)
 
         # Rota para arquivos estáticos (CSS, JS, imagens)
         self.app.route('/static/<filename:path>', callback=self.serve_static)
 
 
-    def home_redirect(self):
-        """Redireciona a rota raiz para /users"""
-        return self.redirect('/users')
-
+    def homePage(self):
+        return self.render('homePage')
+    
+    def users_list(self):
+        return self.render('users')
 
     def helper(self):
         return self.render('helper-final')
