@@ -12,7 +12,6 @@
 
     <header>
         <div class="main">
-
             <dir class="logo">
                 <img src="../static/img/logoVittalyLife(semFundoParcial).png" alt="Logo VittalyLife">  
             </dir>
@@ -29,15 +28,30 @@
         </div>
 
         <div class="button">
-            <a href="users" class="btn">USERS</a>
-            <a href="helper" class="btn">HELPER</a>
-            <a href="" class="btn">LEARN MORE</a>
+            <p class="btn">Começar é importante, continuar é essencial!</p>
         </div>
     </header>
 
     <section class="sobreNos">
-        <h1>Aqui vai ter a parte do sobre nós da página</h1>
+        <h2>Aqui vai ter a parte do sobre nós da aplicação web</h2>
+        <p class="frase1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa saepe, minima perspiciatis obcaecati quis doloremque minus ducimus eaque non magnam id facere amet officiis dolor debitis illum cumque consectetur deleniti!</p>
+        <p class="frase2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolorum saepe reprehenderit possimus porro cumque quisquam ad quidem. Quis voluptatum et magnam repellendus commodi dolores pariatur necessitatibus veniam sunt praesentium.
+        Porro sapiente nemo ipsa eum, deleniti soluta nisi consectetur, quod tempora repellendus aliquid nam consequatur quos velit iste aliquam! Quidem officia sunt maxime autem rerum facere, quaerat enim atque iusto.</p>
     </section>
+
+    <section class="loginCad">
+        <div class="h1Part">
+            <h1>Login e cadastro aqui ></h1>
+        </div>
+        <div class="loginCadPart">
+            <a href="">Login</a>
+            <a href="">Cadastrar</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>VittalyLife &copy; 2024</p>
+    </footer>
     
 </body>
 </html>
