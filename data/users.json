@@ -4,5 +4,11 @@
         "name": "Pedro Galdino",
         "email": "pedrogaldinob@gmail.com",
         "birthdate": "2025-10-31"
+    },
+    {
+        "id": 3,
+        "name": "Marcos vinicius",
+        "email": "vinicius@gmail.com",
+        "birthdate": "2010-10-25"
     }
 ]

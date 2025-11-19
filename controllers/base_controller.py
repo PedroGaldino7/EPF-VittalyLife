@@ -9,7 +9,7 @@ class BaseController:
     def _setup_base_routes(self):
         """Configura rotas básicas comuns a todos os controllers"""
         self.app.route('/', method='GET', callback=self.homePage)
-        self.app.route('/users', method='GET', callback=self.users_list)
+        # self.app.route('/users', method='GET', callback=self.users_list)
         self.app.route('/helper', method=['GET'], callback=self.helper)
 
         # Rota para arquivos estáticos (CSS, JS, imagens)
@@ -24,7 +24,6 @@ class BaseController:
 
     def helper(self):
         return self.render('helper-final')
-
 
     def serve_static(self, filename):
         """Serve arquivos estáticos da pasta static/"""
