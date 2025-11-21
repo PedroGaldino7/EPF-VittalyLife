@@ -22,14 +22,14 @@ header{
 }
 
 .animar{
-    opacity: 0; /* Totalmente transparente */
-    transform: translateY(20px); /* Desloca o elemento 20px para baixo (para o slide-up) */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Define a transição suave */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .animar.visivel{
-    opacity: 1; /* Totalmente visível */
-    transform: translateY(0); /* Volta para a posição original */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 ul{

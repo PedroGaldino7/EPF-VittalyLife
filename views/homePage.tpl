@@ -23,20 +23,20 @@
             </ul>
         </div>
 
-        <div class="title animar">
+        <div class="title">
             <h1>Vittaly Life</h1>
         </div>
 
-        <div class="button animar">
+        <div class="button">
             <p class="btn">Começar é importante, continuar é essencial!</p>
         </div>
     </header>
 
     <section class="sobreNos">
-        <h2>Aqui vai ter a parte do sobre nós da aplicação web</h2>
-        <p class="frase1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa saepe, minima perspiciatis obcaecati quis doloremque minus ducimus eaque non magnam id facere amet officiis dolor debitis illum cumque consectetur deleniti!</p>
-        <p class="frase2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolorum saepe reprehenderit possimus porro cumque quisquam ad quidem. Quis voluptatum et magnam repellendus commodi dolores pariatur necessitatibus veniam sunt praesentium.
-        Porro sapiente nemo ipsa eum, deleniti soluta nisi consectetur, quod tempora repellendus aliquid nam consequatur quos velit iste aliquam! Quidem officia sunt maxime autem rerum facere, quaerat enim atque iusto.</p>
+        <h2>Sobre nós</h2>
+        <p class="frase1">A VittalyLife nasceu com o objetivo de ajudar pessoas a criar e manter hábitos saudáveis de forma simples, prática e motivadora. Acreditamos que pequenas ações diárias podem transformar vidas – seja bebendo mais água, praticando exercícios, lendo, dormindo melhor ou cuidando da alimentação.</p>
+        <p class="frase2">O problma que o site resolve: Muitas pessoas têm dificuldade em criar e manter hábitos saudáveis devido à falta de motivação, organização e acompanhamento. A VittalyLife oferece uma plataforma intuitiva onde os usuários podem definir metas, acompanhar seu progresso e receber lembretes diários para incentivar a continuidade dos hábitos.
+        </p>
     </section>
 
     <section class="loginCad">
@@ -52,7 +52,5 @@
     <footer>
         <p>VittalyLife &copy; 2024</p>
     </footer>
-    
-    <script src="../static/js/scriptLoginPage.js"></script>
 </body>
 </html>

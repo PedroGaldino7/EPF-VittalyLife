@@ -9,7 +9,6 @@ class BaseController:
     def _setup_base_routes(self):
         """Configura rotas básicas comuns a todos os controllers"""
         self.app.route('/', method='GET', callback=self.homePage)
-        self.app.route('/users', method='GET', callback=self.users_list)
         self.app.route('/loginPage', method='GET', callback=self.login_page)
         self.app.route('/cadPage', method='GET', callback=self.cad_page)
         self.app.route('/helper', method=['GET'], callback=self.helper)
@@ -26,9 +25,6 @@ class BaseController:
     
     def cad_page(self):
         return self.render('cadPage')
-    
-    def users_list(self):
-        return self.render('users')
 
     def helper(self):
         return self.render('helper-final')
