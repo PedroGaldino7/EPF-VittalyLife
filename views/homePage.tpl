@@ -18,8 +18,8 @@
 
             <ul>
                 <li class="active"><a href="">Início</a></li>
-                <li><a href="">Login</a></li>
-                <li><a href="">Cadastrar</a></li>
+                <li><a href="loginPage">Login</a></li>
+                <li><a href="cadPage">Cadastrar</a></li>
             </ul>
         </div>
 
@@ -44,8 +44,8 @@
             <h1>Login e cadastro aqui ></h1>
         </div>
         <div class="loginCadPart">
-            <a href="">Login</a>
-            <a href="">Cadastrar</a>
+            <a href="loginPage">Login</a>
+            <a href="cadPage">Cadastrar</a>
         </div>
     </section>
 
