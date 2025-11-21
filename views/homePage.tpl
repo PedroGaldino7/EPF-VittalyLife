@@ -23,11 +23,11 @@
             </ul>
         </div>
 
-        <div class="title">
+        <div class="title animar">
             <h1>Vittaly Life</h1>
         </div>
 
-        <div class="button">
+        <div class="button animar">
             <p class="btn">Começar é importante, continuar é essencial!</p>
         </div>
     </header>
@@ -53,5 +53,6 @@
         <p>VittalyLife &copy; 2024</p>
     </footer>
     
+    <script src="../static/js/scriptLoginPage.js"></script>
 </body>
 </html>

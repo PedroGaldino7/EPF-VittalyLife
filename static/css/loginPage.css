@@ -23,7 +23,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* background: url(../img/imgFundoLogin.jpg) no-repeat; */
+    background: url(../img/fundoImagemLoginCad.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }

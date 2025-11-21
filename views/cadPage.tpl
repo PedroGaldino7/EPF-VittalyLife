@@ -11,10 +11,10 @@
 
     <div class="wrapper animar">
         <form action="">
-            <h1>Login</h1>
+            <h1>Cadastrar</h1>
             <div class="input-box">
                 <input type="email" placeholder="Email" required>
-                <i class='bx bxs-user'></i>
+                <i class='bx bxs-envelope'></i>
             </div>
             
             <div class="input-box">
@@ -27,15 +27,10 @@
                 <i class='bx bxs-lock-alt' ></i>
             </div>
 
-            <div class="remember-forgot">
-                <label><input type="checkbox"> Remember-me </label>
-                <a href="">Forgot Password?</a>
-            </div>
-
             <button type="submit" class="btn">Login</button>
 
             <div class="register-link">
-                <p>Don't have an acconut? <a href="">Register</a></p>
+                <p>Do you have an account? <a href="loginPage">Sign in</a></p>
             </div>
         </form>
     </div>
