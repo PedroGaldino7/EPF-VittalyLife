@@ -23,14 +23,14 @@
             </div>
 
             <div class="remember-forgot">
-                <label><input type="checkbox"> Remember-me </label>
-                <a href="">Forgot Password?</a>
+                <label><input type="checkbox"> Lembre-me</label>
+                <a href="">Esqueceu a senha?</a>
             </div>
 
             <button type="submit" class="btn">Login</button>
 
             <div class="register-link">
-                <p>Don't have an acconut? <a href="cadPage">Register</a></p>
+                <p>Não possui uma conta? <a href="cadPage">Registre-se</a></p>
             </div>
         </form>
     </div>

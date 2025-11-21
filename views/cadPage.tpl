@@ -27,10 +27,10 @@
                 <i class='bx bxs-lock-alt' ></i>
             </div>
 
-            <button type="submit" class="btn">Login</button>
+            <button type="submit" class="btn">Cadastrar</button>
 
             <div class="register-link">
-                <p>Do you have an account? <a href="loginPage">Sign in</a></p>
+                <p>Ja possui uma conta? <a href="loginPage">Entre</a></p>
             </div>
         </form>
     </div>
