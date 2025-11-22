@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* border: 1px solid blue; */
+    background-color: rgba(70, 114, 189, 0.747);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    display: block;
+    min-height: 100vh;
+}
+
+header{
+    /* border: 1px solid red; */
+    background-color: rgba(66, 88, 130, 0.747);
+    display: flex;
+    width: 100%;
+    height: 17vh;
+    border-radius: 10px;
+    box-shadow: 0px 3px 7px rgb(66, 66, 66);
+}
+
+.logoDiv{
+    /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.logoDiv .logo{
+    margin-left: 20%;
+    font-size: 30px;
+    font-weight: 700;
+    transition: .3s;
+    transform: scale(1);
+}
+
+.logoDiv .logo a{
+    text-decoration: none;
+    color: white;
+}
+
+.logoDiv .logo:hover{
+    transform: scale(1.1);
+    text-shadow: black 1px 1px 3px;
+}
+
+.loginDiv{
+    /* border: 1px solid yellow; */
+    display: flex;
+    width: 50%;
+}
+
+.loginDiv .botaoLogin{
+    margin-left: auto;
+    margin-right: 20%;
+    align-self: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.loginDiv .botaoLogin:hover{
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+section{
+    /* border: 1px solid red; */
+    display: flex;
+    width: 100%;
+    height: 83vh;
+}
+
+.leftDiv{
+    /* border: 1px solid yellow; */
+    display: block;
+    width: 60%;
+}
+
+.leftDiv .streakDiv{
+    overflow: hidden;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
+
+.leftDiv .streakDiv .imgStreak{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid blue; */
+    height: 100%;
+    width: 50%;
+}
+
+.leftDiv .streakDiv .imgStreak .skill{
+    width: 240px;
+    height: 240px;
+    /* background: cornflowerblue; */
+    position: relative;
+}
+
+.outer{
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    /* border: 1px solid red; */
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(72, 27, 150, 0.747);
+}
+
+.inner{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+                inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                -0.5px -0.5px 0px rgba(255,255,255,1),
+                0.5px 0.5px 0px rgba(0,0,0,0.15),
+                0px 12px 10px -10px rgba(0,0,0,0.05);       
+}
+
+#number{
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+}
+
+circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    /* stroke: rgb(179, 179, 179); */
+    stroke-width: 20px;
+    stroke-dasharray: 691;
+    stroke-dashoffset: 691;
+    animation: anim 3s linear forwards;
+}
+
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes anim{
+    from{
+        stroke-dashoffset: 691;
+    }
+    to{
+        /* stroke-dashoffset: calc(691 - (691 * 0.70); */
+        stroke-dashoffset: 207.3;
+    }
+}
+
+.leftDiv .streakDiv .fraseStreak{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* border: 1px solid green; */
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.leftDiv .taskPendenteDiv{
+    /* border: 1px solid green; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    min-width: 100%;
+    height: 30%;
+}
+
+.leftDiv .taskPendenteDiv .cardTaskPendente{
+    /* border: 1px solid red; */
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin-left: 30px;
+    height: 21vh;
+    width: 21vh;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: .3s;
+}
+
+.leftDiv .taskPendenteDiv .cardTaskPendente:hover{
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.rightDiv{
+    /* border: 1px solid blue; */
+    display: flex;
+    width: 40%;
+    justify-content: center;
+}
+
+.rightDiv .menuDivRight{
+    /* border: 1px solid red; */
+    display: block;
+    padding: 50px 30px 30px 30px;
+    width: 100%;
+}
+
+.rightDiv .menuDivRight .opcDivRight{
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    margin-bottom: 15px;
+    height: 15%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: .3s;
+    transform: scale(1);
+    text-decoration: none;
+}
+
+.rightDiv .menuDivRight .opcDivRight:hover{
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.rightDiv .menuDivRight .opcDivRight a{
+    text-decoration: none;
+    color: white;
+}
