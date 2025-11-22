@@ -5,7 +5,7 @@
 <form action="{{action}}" method="post">
 
     <label>Nome:<br>
-        <input type="text" name="name" value="{{user.name if user else ''}}" required>
+        <input type="text" name="username" value="{{user.username if user else ''}}" required>
     </label><br><br>
 
     <label>Email:<br>

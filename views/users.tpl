@@ -15,7 +15,7 @@
     % for u in users:
     <tr>
         <td>{{u.id}}</td>
-        <td>{{u.name}}</td>
+        <td>{{u.username}}</td>
         <td>{{u.email}}</td>
         <td>{{u.created_at}}</td>
         <td>

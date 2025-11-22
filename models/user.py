@@ -4,9 +4,9 @@ from datetime import datetime
 
 
 class User:
-    def __init__(self, id, name, email, password_hash, created_at=None, habits=None):
+    def __init__(self, id, username, email, password_hash, created_at=None, habits=None):
         self.id = id
-        self.name = name
+        self.username = username
         self.email = email
         self.password_hash = password_hash
         self.created_at = created_at or datetime.now().isoformat()
@@ -15,7 +15,7 @@ class User:
     def to_dict(self):
         return {
             "id": self.id,
-            "name": self.name,
+            "username": self.username,
             "email": self.email,
             "password_hash": self.password_hash,
             "created_at": self.created_at,
@@ -44,7 +44,9 @@ class UserModel:
             json.dump([u.to_dict() for u in self.users], f, indent=4, ensure_ascii=False)
 
     def get_all(self):
+        self.users = self._load()
         return self.users
+
 
     def get_by_id(self, user_id):
         return next((u for u in self.users if u.id == user_id), None)

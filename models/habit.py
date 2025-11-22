@@ -49,6 +49,7 @@ class HabitModel:
             json.dump([h.to_dict() for h in self.habits], f, indent=4, ensure_ascii=False)
 
     def get_all(self):
+        self.habits = self._load()
         return self.habits
 
     def get_by_id(self, habit_id):

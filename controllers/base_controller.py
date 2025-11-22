@@ -1,4 +1,6 @@
 from bottle import static_file
+from utils.session import get_session_user
+from services.user_service import UserService
 
 class BaseController:
     def __init__(self, app):
@@ -28,6 +30,13 @@ class BaseController:
 
     def helper(self):
         return self.render('helper-final')
+    
+    def get_logged_user(self):
+        user_id = get_session_user()
+        if not user_id:
+            return None
+        
+        return UserService().get_by_id(int(user_id))
 
     def serve_static(self, filename):
         """Serve arquivos estáticos da pasta static/"""

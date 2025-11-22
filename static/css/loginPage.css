@@ -18,6 +18,17 @@
     transform: translateY(0); /* Volta para a posição original */
 }
 
+.alert-error {
+    background: #ff4d4d;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+
 body{
     display: flex;
     justify-content: center;
