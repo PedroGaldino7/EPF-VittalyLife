@@ -50,7 +50,7 @@
     </section>
 
     <footer>
-        <p>VittalyLife &copy; 2024</p>
+        <p>VittalyLife &copy; 2025</p>
     </footer>
 </body>
 </html>
