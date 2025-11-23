@@ -31,6 +31,7 @@
 
             <div class="register-link">
                 <p>Ja possui uma conta? <a href="loginPage">Entre</a></p>
+                <p><a href="/">Voltar</a></p>
             </div>
         </form>
     </div>

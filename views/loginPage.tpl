@@ -38,6 +38,7 @@
 
             <div class="register-link">
                 <p>Não possui uma conta? <a href="/cadPage">Registre-se</a></p>
+                <p><a href="/">Voltar</a></p>
             </div>
         </form>
     </div>

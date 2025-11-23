@@ -13,7 +13,7 @@
     <header>
         <div class="main">
             <dir class="logo">
-                <img src="../static/img/logoVittalyLife(semFundoParcial).png" alt="Logo VittalyLife">  
+                <img src="../static/img/logoSemFundo.png" alt="Logo VittalyLife">  
             </dir>
 
             <ul>
