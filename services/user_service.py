@@ -11,20 +11,13 @@ class UserService:
     def get_all(self):
         return self.user_model.get_all()
 
-    # ----------------------------------------
-    # HASH SIMPLES PARA SENHA
-    # ----------------------------------------
     def hash_password(self, password):
         return hashlib.sha256(password.encode()).hexdigest()
 
     def get_by_id(self, user_id):
-        # sempre recarrega o JSON
         self.user_model.users = self.user_model._load()
         return self.user_model.get_by_id(user_id)
     
-    # ----------------------------------------
-    # CADASTRAR NOVO USUÁRIO
-    # ----------------------------------------
     def save(self):
         last_id = max([u.id for u in self.user_model.get_all()], default=0)
         new_id = last_id + 1
@@ -63,10 +56,6 @@ class UserService:
 
         self.user_model.add(user)
 
-
-    # ----------------------------------------
-    # EDITAR
-    # ----------------------------------------
     def edit(self, user):
         user.username = request.forms.get("username")
         user.email = request.forms.get("email")
@@ -78,17 +67,10 @@ class UserService:
 
         self.user_model.update(user)
 
-    # ----------------------------------------
-    # DELETAR
-    # ----------------------------------------
     def delete(self, user_id):
         self.user_model.delete(user_id)
 
-    # ----------------------------------------
-    # LOGIN (VERIFICA USUÁRIO E SENHA)
-    # ----------------------------------------
     def authenticate(self, username, password):
-        # Recarrega o JSON sempre antes de autenticar
         self.user_model.users = self.user_model._load()
 
         password_hash = self.hash_password(password)

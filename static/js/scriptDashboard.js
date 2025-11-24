@@ -10,3 +10,17 @@ setInterval(() => {
     }
 
 }, 42);
+
+const btnUser = document.getElementById("btnUser");
+const userDropdown = document.getElementById("userDropdown");
+
+btnUser.addEventListener("click", () => {
+    userDropdown.style.display =
+        userDropdown.style.display === "block" ? "none" : "block";
+});
+
+document.addEventListener("click", (e) => {
+    if (!btnUser.contains(e.target) && !userDropdown.contains(e.target)) {
+        userDropdown.style.display = "none";
+    }
+});

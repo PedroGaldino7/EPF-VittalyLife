@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/styleDashboard.css">
     
-    <title>Teste</title>
+    <title>Dashboard</title>
 </head>
 <body>
 
@@ -16,9 +16,15 @@
         <div class="loginDiv">
         % if user:
 
-            <button class="botaoLogin">
+            <button class="botaoLogin" id="btnUser">
                 Bem vindo: {{user.username}}
             </button>
+
+            <div class="dropdownMenu" id="userDropdown">
+                <a href="/profile">Meu perfil</a>
+                <a href="/settings">Configurações</a>
+                <a href="/logout">Sair</a>
+            </div>
             
         % else:
             <button class="botaoLogin"><a href="/login">Login</a></button>
@@ -66,7 +72,7 @@
         <div class="rightDiv">
             <div class="menuDivRight">
                 <div class="opcDivRight"><a href="habits">Listar todas as tarefas</a></div>
-                <div class="opcDivRight">Criar/Editar tarefas</div>
+                <div class="opcDivRight"><a href="habits/add">Criar tarefas</a></div>
                 <div class="opcDivRight"><a href="desempenho.html">Gráficos de desempenho</a></div>
                 <div class="opcDivRight">Configurações da conta</div>
             </div>

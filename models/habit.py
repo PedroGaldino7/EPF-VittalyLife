@@ -1,17 +1,13 @@
-# models/habit.py
-import uuid
 from datetime import datetime
 import json
 import os
 
 class Habit:
-    def __init__(self, id, name, description, frequency, goal, color, active=True, created_at=None):
+    def __init__(self, id, name, description, frequency, active=True, created_at=None):
         self.id = id
         self.name = name
         self.description = description
-        self.frequency = frequency  # ex: "daily"
-        self.goal = goal            # ex: "2 litros", "10 páginas"
-        self.color = color          # ex: "#FF6B00"
+        self.frequency = frequency
         self.active = active
         self.created_at = created_at or datetime.utcnow().isoformat()
 
@@ -21,8 +17,6 @@ class Habit:
             "name": self.name,
             "description": self.description,
             "frequency": self.frequency,
-            "goal": self.goal,
-            "color": self.color,
             "active": self.active,
             "created_at": self.created_at
         }

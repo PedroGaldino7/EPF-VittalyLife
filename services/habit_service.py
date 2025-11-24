@@ -20,8 +20,6 @@ class HabitService:
         name = request.forms.get("name")
         description = request.forms.get("description")
         frequency = request.forms.get("frequency")
-        goal = request.forms.get("goal")
-        color = request.forms.get("color")
         active = request.forms.get("active") == "on"
 
         habit = Habit(
@@ -29,8 +27,6 @@ class HabitService:
             name=name,
             description=description,
             frequency=frequency,
-            goal=goal,
-            color=color,
             active=active
         )
 
@@ -40,8 +36,6 @@ class HabitService:
         habit.name = request.forms.get("name")
         habit.description = request.forms.get("description")
         habit.frequency = request.forms.get("frequency")
-        habit.goal = request.forms.get("goal")
-        habit.color = request.forms.get("color")
         habit.active = request.forms.get("active") == "on"
 
         self.habit_model.update(habit)

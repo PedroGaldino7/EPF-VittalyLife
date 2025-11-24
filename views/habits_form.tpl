@@ -22,14 +22,6 @@
         </select>
     </label><br><br>
 
-    <label>Meta (goal):<br>
-        <input type="text" name="goal" value="{{habit.goal if habit else ''}}" required>
-    </label><br><br>
-
-    <label>Cor:<br>
-        <input type="color" name="color" value="{{habit.color if habit else '#FF6B00'}}">
-    </label><br><br>
-
     <label>
         <input type="checkbox" name="active" {{'checked' if habit and habit.active else ''}}>
         Hábito Ativo?

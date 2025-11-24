@@ -77,6 +77,34 @@ header{
     transform: scale(1.1);
 }
 
+.dropdownMenu {
+    z-index: 1;
+    position: absolute;
+    top: 70px;
+    right: 20%;
+    display: none;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+    min-width: 180px;
+}
+
+.dropdownMenu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: .3s;
+    border-radius: 5px;
+}
+
+.dropdownMenu a:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
 section{
     /* border: 1px solid red; */
     display: flex;

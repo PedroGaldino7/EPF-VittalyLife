@@ -12,17 +12,13 @@ class RegisterController(BaseController):
         self.app.route("/register", method=["GET", "POST"], callback=self.register)
 
     def register(self):
-        # Se só está abrindo
         if request.method == "GET":
             return self.render("cadPage")
 
-        # Se os dados foram enviados
         username = request.forms.get("username")
         email = request.forms.get("email")
         password = request.forms.get("password")
 
-        # Salva usando o service já existente
         self.user_service.create_user(username, email, password)
 
-        # Depois de cadastrar, vai para o login
         return self.redirect("/login")

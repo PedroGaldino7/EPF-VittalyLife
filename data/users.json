@@ -1,2 +1,66 @@
 [
+    {
+        "id": 1,
+        "username": "pedro",
+        "email": "pedrogaldino@gmail.com",
+        "password_hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "created_at": "2025-11-23T14:07:28.924684",
+        "habits": []
+    },
+    {
+        "id": 2,
+        "username": "gabriel",
+        "email": "gabriel@gmail.com",
+        "password_hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "created_at": "2025-11-24T12:58:39.769282",
+        "habits": []
+    },
+    {
+        "id": 3,
+        "username": "gabriel",
+        "email": "gabriel@gmail.com",
+        "password_hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "created_at": "2025-11-24T12:59:04.223343",
+        "habits": []
+    },
+    {
+        "id": 4,
+        "username": "tiago",
+        "email": "tiago@gmail.com",
+        "password_hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "created_at": "2025-11-24T13:06:22.126845",
+        "habits": []
+    },
+    {
+        "id": 5,
+        "username": "gabriel",
+        "email": "gabriel@gmail.com",
+        "password_hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "created_at": "2025-11-24T13:28:34.362172",
+        "habits": []
+    },
+    {
+        "id": 6,
+        "username": "julio",
+        "email": "juliobarcelar@gmail.com",
+        "password_hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "created_at": "2025-11-24T13:48:44.462244",
+        "habits": []
+    },
+    {
+        "id": 7,
+        "username": "heitor",
+        "email": "heitor@gmail.com",
+        "password_hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "created_at": "2025-11-24T13:50:49.414826",
+        "habits": []
+    },
+    {
+        "id": 8,
+        "username": "pedroo",
+        "email": "pedro@gmail.com",
+        "password_hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "created_at": "2025-11-24T13:53:25.845778",
+        "habits": []
+    }
 ]

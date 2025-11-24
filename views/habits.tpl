@@ -1,7 +1,6 @@
 % rebase('layout.tpl', title='Hábitos')
 
 <h1>Hábitos</h1>
-<a href="/habits/add">Adicionar Hábito</a>
 
 <table border="1">
     <tr>
@@ -9,8 +8,6 @@
         <th>Nome</th>
         <th>Descrição</th>
         <th>Frequência</th>
-        <th>Meta</th>
-        <th>Cor</th>
         <th>Ativo?</th>
         <th>Ações</th>
     </tr>
@@ -21,13 +18,6 @@
         <td>{{h.name}}</td>
         <td>{{h.description}}</td>
         <td>{{h.frequency}}</td>
-        <td>{{h.goal}}</td>
-        <td>
-            <span style="background: '{{h.color}}'; padding:4px 10px; border-radius:4px;">
-                &nbsp;
-            </span>
-        </td>
-
         <td>{{'Sim' if h.active else 'Não'}}</td>
         <td>
             <a href="/habits/edit/{{h.id}}">Editar</a>
@@ -38,3 +28,5 @@
     </tr>
     % end
 </table>
+
+<p><a href="/dashboard">Voltar para o dashboard</a></p>
