@@ -21,8 +21,7 @@
             </button>
 
             <div class="dropdownMenu" id="userDropdown">
-                <a href="/profile">Meu perfil</a>
-                <a href="/settings">Configurações</a>
+                <a href="/users/edit/{{user.id}}">Alterar dados</a>
                 <a href="/logout">Sair</a>
             </div>
             
