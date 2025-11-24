@@ -3,8 +3,9 @@ import json
 import os
 
 class Habit:
-    def __init__(self, id, name, description, frequency, active=True, created_at=None):
+    def __init__(self, id, user_id, name, description, frequency, active=True, created_at=None):
         self.id = id
+        self.user_id = user_id
         self.name = name
         self.description = description
         self.frequency = frequency
@@ -14,6 +15,7 @@ class Habit:
     def to_dict(self):
         return {
             "id": self.id,
+            "user_id": self.user_id,
             "name": self.name,
             "description": self.description,
             "frequency": self.frequency,
@@ -48,6 +50,9 @@ class HabitModel:
 
     def get_by_id(self, habit_id):
         return next((h for h in self.habits if h.id == habit_id), None)
+    
+    def get_by_user(self, user_id):
+        return [h for h in self.habits if h.user_id == user_id]
 
     def add(self, habit):
         self.habits.append(habit)

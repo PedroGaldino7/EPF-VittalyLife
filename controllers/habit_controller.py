@@ -2,6 +2,7 @@
 from bottle import Bottle, request
 from .base_controller import BaseController
 from services.habit_service import HabitService
+from utils.session import get_session_user
 
 class HabitController(BaseController):
     def __init__(self, app):
@@ -16,8 +17,9 @@ class HabitController(BaseController):
         self.app.route('/habits/delete/<habit_id:int>', method='POST', callback=self.delete_habit)
 
     def list_habits(self):
-        habits = self.habit_service.get_all()
-        return self.render('habits', habits=habits)
+        user_id = get_session_user()
+        habits = self.habit_service.get_by_user(user_id)
+        return self.render("habits", habits=habits)
 
     def add_habit(self):
         if request.method == 'GET':

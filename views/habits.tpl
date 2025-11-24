@@ -4,7 +4,6 @@
 
 <table border="1">
     <tr>
-        <th>ID</th>
         <th>Nome</th>
         <th>Descrição</th>
         <th>Frequência</th>
@@ -14,7 +13,6 @@
 
     % for h in habits:
     <tr>
-        <td>{{h.id}}</td>
         <td>{{h.name}}</td>
         <td>{{h.description}}</td>
         <td>{{h.frequency}}</td>

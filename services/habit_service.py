@@ -1,6 +1,7 @@
 # services/habit_service.py
 from bottle import request
 from models.habit import HabitModel, Habit
+from utils.session import get_session_user
 
 class HabitService:
     def __init__(self):
@@ -11,12 +12,16 @@ class HabitService:
 
     def get_by_id(self, habit_id):
         return self.habit_model.get_by_id(habit_id)
+    
+    def get_by_user(self, user_id):
+        return self.habit_model.get_by_user(user_id)
 
     def save(self):
         habits = self.habit_model.get_all()
         last_id = max([h.id for h in habits], default=0)
         new_id = last_id + 1
 
+        user_id = get_session_user()
         name = request.forms.get("name")
         description = request.forms.get("description")
         frequency = request.forms.get("frequency")
@@ -24,6 +29,7 @@ class HabitService:
 
         habit = Habit(
             id=new_id,
+            user_id=user_id,
             name=name,
             description=description,
             frequency=frequency,
