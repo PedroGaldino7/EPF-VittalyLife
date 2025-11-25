@@ -31,4 +31,4 @@
 
 </form>
 
-<a href="/habits">Voltar</a>
+<a href="/dashboard">Voltar</a>
