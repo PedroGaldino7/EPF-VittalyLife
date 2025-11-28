@@ -70,13 +70,13 @@ class UserService:
     def delete(self, user_id):
         self.user_model.delete(user_id)
 
-    def authenticate(self, username, password):
+    def authenticate(self, email, password):
         self.user_model.users = self.user_model._load()
 
         password_hash = self.hash_password(password)
 
         for u in self.user_model.users:
-            if u.username == username and u.password_hash == password_hash:
+            if u.email == email and u.password_hash == password_hash:
                 return u
 
         return None

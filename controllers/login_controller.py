@@ -21,16 +21,16 @@ class LoginController(BaseController):
         
         # self.user_model.users = self.user_model._load()
 
-        username = request.forms.get("username")
+        email = request.forms.get("email")
         password = request.forms.get("password")
 
-        user = self.user_service.authenticate(username, password)
+        user = self.user_service.authenticate(email, password)
 
         if user:
             set_session_user(user.id)
             return self.redirect("/dashboard")
 
-        return self.render("loginPage", error="usuário ou senha incorretos.")
+        return self.render("loginPage", error="email ou senha incorretos.")
 
     def logout(self):
         clear_session()
