@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "habit_id": 2,
+        "user_id": 1,
+        "log_date": "2025-11-29",
+        "done": true
+    }
+]

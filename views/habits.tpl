@@ -22,6 +22,9 @@
             <form action="/habits/delete/{{h.id}}" method="post" style="display:inline;">
                 <button type="submit">Excluir</button>
             </form>
+            <form action="/habits/checkin/{{h.id}}" method="post" style="display:inline;">
+                <button>Check-in</button>
+            </form>
         </td>
     </tr>
     % end
