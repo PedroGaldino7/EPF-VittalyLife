@@ -2,6 +2,8 @@ from bottle import Bottle
 from .base_controller import BaseController
 from services.user_service import UserService
 from utils.session import get_session_user
+from services.habit_service import HabitService
+from services.habit_log_service import HabitLogService
 
 dashboard_routes = Bottle()
 
@@ -9,6 +11,8 @@ class DashboardController(BaseController):
     def __init__(self, app):
         super().__init__(app)
         self.user_service = UserService()
+        self.habit_service = HabitService()
+        self.log_service = HabitLogService()
         self.setup_routes()
 
     def setup_routes(self):
@@ -16,9 +20,23 @@ class DashboardController(BaseController):
 
     def index(self):
         user_id = get_session_user()
-
         if not user_id:
             return self.redirect("/login")
 
-        user = self.user_service.get_by_id(int(user_id))
-        return self.render("dashboard", user=user)
+        user_id = int(user_id)
+
+        # pega hábitos do usuário
+        habits = self.habit_service.get_by_user(user_id)
+
+        # pega logs de hoje
+        today_logs = self.log_service.get_today_user_logs(user_id)
+        done_ids = {log.habit_id for log in today_logs}
+
+        # filtra pendentes (os que NÃO estão em done_ids)
+        pending = [h for h in habits if h.id not in done_ids]
+
+        return self.render(
+            "dashboard",
+            user=self.get_user(user_id),
+            pending_habits=pending
+        )

@@ -14,17 +14,12 @@
 
     <label>Frequência:<br> 
         <select name="frequency" required>
-            % for f in ['Diario', 'Semanal', 'Mensal', 'Costumizado']:
+            % for f in ['Diario', 'Semanal', 'Quinzenal', 'Mensal', 'Bimestral', 'Trimestral', 'Semestral', 'Anual']:
                 <option value="{{f}}" {{'selected' if habit and habit.frequency == f else ''}}>
-                    {{ 'Diário' if f=='Diario' else 'Semanal' if f=='Semanal' else 'Mensal' if f=='Mensal' else 'Personalizado' }}
+                    {{ 'Diário' if f=='Diario' else 'Semanal' if f=='Semanal' else 'Quinzenal' if f=='Quinzenal' else 'Mensal' if f=='Mensal' else 'Bimestral' if f=='Bimestral' else 'Trimestral' if f=='Trimestral' else 'Semestral' if f=='Semestral' else 'Anual' if f=='Anual' else ''}}
                 </option>
             % end
         </select>
-    </label><br><br>
-
-    <label>
-        <input type="checkbox" name="active" {{'checked' if habit and habit.active else ''}}>
-        Hábito Ativo?
     </label><br><br>
 
     <button type="submit">Salvar</button>

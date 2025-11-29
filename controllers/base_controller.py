@@ -6,6 +6,7 @@ class BaseController:
     def __init__(self, app):
         self.app = app
         self._setup_base_routes()
+        self.user_service = UserService()
 
 
     def _setup_base_routes(self):
@@ -30,6 +31,9 @@ class BaseController:
 
     def helper(self):
         return self.render('helper-final')
+    
+    def get_user(self, user_id):
+        return self.user_service.get_by_id(user_id)
     
     def get_logged_user(self):
         user_id = get_session_user()

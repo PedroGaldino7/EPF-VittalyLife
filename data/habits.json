@@ -1,11 +1,18 @@
 [
     {
-        "id": 2,
-        "user_id": "1",
+        "id": 1,
+        "user_id": 2,
+        "name": "ir pra academia",
+        "description": "Ir pra academia todo dia as 16hr",
+        "frequency": "Diario",
+        "created_at": "2025-11-29T17:46:35.208714"
+    },
+    {
+        "id": 3,
+        "user_id": 1,
         "name": "pagar boletos",
-        "description": "pagar todas as contas e os boletos",
-        "frequency": "Mensal",
-        "active": true,
-        "created_at": "2025-11-29T04:57:40.337063"
+        "description": "dawdawd",
+        "frequency": "Diario",
+        "created_at": "2025-11-29T17:53:37.924932"
     }
 ]

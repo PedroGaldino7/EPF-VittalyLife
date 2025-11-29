@@ -9,7 +9,6 @@ class Habit:
         self.name = name
         self.description = description
         self.frequency = frequency
-        self.active = active
         self.created_at = created_at or datetime.utcnow().isoformat()
 
     def to_dict(self):
@@ -19,7 +18,6 @@ class Habit:
             "name": self.name,
             "description": self.description,
             "frequency": self.frequency,
-            "active": self.active,
             "created_at": self.created_at
         }
 
@@ -41,7 +39,7 @@ class HabitModel:
             return [Habit.from_dict(item) for item in json.load(f)]
 
     def _save(self):
-        with open(self.FILE_PATH, "w", encoding="utf-8") as f:
+        with open(self.FILE_PATH, "w", encoding="utf-8") as f:  
             json.dump([h.to_dict() for h in self.habits], f, indent=4, ensure_ascii=False)
 
     def get_all(self):

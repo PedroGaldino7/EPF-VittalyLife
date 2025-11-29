@@ -62,11 +62,21 @@
                 </div>
             </div>
             <div class="taskPendenteDiv">
-                <div class="cardTaskPendente">Tomar 2L de água</div>
-                <div class="cardTaskPendente">Meditar 30min</div>
-                <div class="cardTaskPendente">Ler 10 capítulos da Biblia</div>
-                <div class="cardTaskPendente">Ler 10 capítulos da Biblia</div>
+                % if pending_habits:
+                    % for h in pending_habits:
+                        <div class="cardTaskPendente">
+                            {{h.name}}
+                            
+                            <form action="/habits/checkin/{{h.id}}" method="post" style="display:inline;">
+                                <button class="btnCheckin">Concluir</button>
+                            </form>
+                        </div>
+                    % end
+                % else:
+                    <p class="nenhumaPendente">🎉 Nenhuma tarefa pendente hoje!</p>
+                % end
             </div>
+
         </div>
         <div class="rightDiv">
             <div class="menuDivRight">

@@ -247,6 +247,12 @@ svg{
     transform: scale(1.05);
 }
 
+.leftDiv .taskPendenteDiv .nenhumaPendente{
+    color: white;
+    text-align: center;
+    font-size: 15px;
+}
+
 .rightDiv{
     /* border: 1px solid blue; */
     display: flex;

@@ -1,18 +1,18 @@
 [
     {
         "id": 1,
-        "username": "pedro",
+        "username": "Pedro Galdino",
         "email": "pedro@gmail.com",
         "password_hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-        "created_at": "2025-11-28T19:46:13.342516",
+        "created_at": "2025-11-29T14:43:32.463109",
         "habits": []
     },
     {
         "id": 2,
-        "username": "gervaci",
-        "email": "gervaci@gmail.com",
+        "username": "Brunna",
+        "email": "brubru@gmail.com",
         "password_hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-        "created_at": "2025-11-29T01:32:55.554861",
+        "created_at": "2025-11-29T14:45:49.558204",
         "habits": []
     }
 ]

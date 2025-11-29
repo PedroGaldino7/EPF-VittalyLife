@@ -46,11 +46,14 @@ class HabitLogModel:
         self._save()
 
     def get_today_by_habit(self, habit_id, user_id):
+        self.logs = self._load()
         today = date.today().isoformat()
         return next(
-            (l for l in self.logs if l.habit_id == habit_id and l.user_id == user_id and l.log_date == today),
+            (l for l in self.logs
+             if l.habit_id == habit_id and l.user_id == user_id and l.log_date == today),
             None
         )
 
     def get_by_user(self, user_id):
+        self.logs = self._load()
         return [l for l in self.logs if l.user_id == user_id]

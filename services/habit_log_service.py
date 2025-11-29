@@ -29,5 +29,14 @@ class HabitLogService:
         return log
 
     def get_today_user_logs(self, user_id):
+        self.model.logs = self.model._load()
         today = date.today().isoformat()
-        return [l for l in self.model.logs if l.user_id == user_id and l.log_date == today]
+        return [
+            l for l in self.model.logs
+            if l.user_id == user_id and l.log_date == today
+        ]
+    
+    def delete_by_habit(self, habit_id):
+        self.model.logs = [l for l in self.model.logs if l.habit_id != habit_id]
+        self.model._save()
+
