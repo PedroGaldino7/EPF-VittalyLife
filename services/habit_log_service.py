@@ -40,3 +40,6 @@ class HabitLogService:
         self.model.logs = [l for l in self.model.logs if l.habit_id != habit_id]
         self.model._save()
 
+    def delete_logs_from_habit(self, habit_id):
+        self.model.delete_by_habit(habit_id)
+

@@ -57,3 +57,7 @@ class HabitLogModel:
     def get_by_user(self, user_id):
         self.logs = self._load()
         return [l for l in self.logs if l.user_id == user_id]
+    
+    def delete_by_habit(self, habit_id):
+        self.logs = [l for l in self.logs if l.habit_id != habit_id]
+        self._save()

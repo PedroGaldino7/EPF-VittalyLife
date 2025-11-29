@@ -47,11 +47,11 @@ class HabitService:
         self.habit_model.update(habit)
 
     def delete(self, habit_id):
-        # 1. apagar logs relacionados
-        self.log_service.delete_by_habit(habit_id)
+        from services.habit_log_service import HabitLogService
+        HabitLogService().delete_logs_from_habit(habit_id)
 
-        # 2. apagar hábito
         self.habit_model.delete(habit_id)
+
 
     def delete_by_user(self, user_id):
         self.habit_model.delete_by_user(user_id)

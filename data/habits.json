@@ -1,18 +1,26 @@
 [
     {
         "id": 1,
-        "user_id": 2,
-        "name": "ir pra academia",
-        "description": "Ir pra academia todo dia as 16hr",
+        "user_id": 1,
+        "name": "ler a biblia",
+        "description": "Ler a biblia (10 caps)",
         "frequency": "Diario",
-        "created_at": "2025-11-29T17:46:35.208714"
+        "created_at": "2025-11-29T19:34:06.918469"
     },
     {
         "id": 3,
+        "user_id": 2,
+        "name": "academia",
+        "description": "Academia 16 hrs",
+        "frequency": "Diario",
+        "created_at": "2025-11-29T19:35:21.959740"
+    },
+    {
+        "id": 4,
         "user_id": 1,
         "name": "pagar boletos",
-        "description": "dawdawd",
-        "frequency": "Diario",
-        "created_at": "2025-11-29T17:53:37.924932"
+        "description": "Pagar boletos do mes",
+        "frequency": "Quinzenal",
+        "created_at": "2025-11-29T19:37:29.095219"
     }
 ]
