@@ -1,1 +1,11 @@
-[]
+[
+    {
+        "id": 2,
+        "user_id": "1",
+        "name": "pagar boletos",
+        "description": "pagar todas as contas e os boletos",
+        "frequency": "Mensal",
+        "active": true,
+        "created_at": "2025-11-29T04:57:40.337063"
+    }
+]

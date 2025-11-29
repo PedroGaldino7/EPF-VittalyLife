@@ -70,6 +70,10 @@ class UserService:
     def delete(self, user_id):
         self.user_model.delete(user_id)
 
+        # Apaga todos os hábitos do usuário
+        from services.habit_service import HabitService
+        HabitService().delete_by_user(user_id)
+
     def authenticate(self, email, password):
         self.user_model.users = self.user_model._load()
 

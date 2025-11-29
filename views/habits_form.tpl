@@ -14,9 +14,9 @@
 
     <label>Frequência:<br> 
         <select name="frequency" required>
-            % for f in ['daily', 'weekly', 'custom']:
+            % for f in ['Diario', 'Semanal', 'Mensal', 'Costumizado']:
                 <option value="{{f}}" {{'selected' if habit and habit.frequency == f else ''}}>
-                    {{ 'Diário' if f=='daily' else 'Semanal' if f=='weekly' else 'Personalizado' }}
+                    {{ 'Diário' if f=='Diario' else 'Semanal' if f=='Semanal' else 'Mensal' if f=='Mensal' else 'Personalizado' }}
                 </option>
             % end
         </select>
