@@ -2,33 +2,25 @@
     {
         "id": 1,
         "user_id": 1,
-        "name": "ler a biblia",
-        "description": "Ler a biblia (10 caps)",
+        "name": "Fazer xixi",
+        "description": "Fazer xixizinho",
         "frequency": "Diario",
-        "created_at": "2025-11-29T19:34:06.918469"
+        "created_at": "2025-11-30T23:15:30.453961"
+    },
+    {
+        "id": 2,
+        "user_id": 1,
+        "name": "Lavar a roupa",
+        "description": "Lavar a roupa no telhado",
+        "frequency": "Diario",
+        "created_at": "2025-11-30T23:15:53.337002"
     },
     {
         "id": 3,
-        "user_id": 2,
-        "name": "academia",
-        "description": "Academia 16 hrs",
-        "frequency": "Diario",
-        "created_at": "2025-11-29T19:35:21.959740"
-    },
-    {
-        "id": 4,
         "user_id": 1,
-        "name": "pagar boletos",
-        "description": "Pagar boletos do mes",
-        "frequency": "Quinzenal",
-        "created_at": "2025-11-29T19:37:29.095219"
-    },
-    {
-        "id": 5,
-        "user_id": 5,
-        "name": "Lavar a roupa",
-        "description": "Lavar a roupa do Dudu",
-        "frequency": "Semanal",
-        "created_at": "2025-11-30T21:34:22.177061"
+        "name": "Fazer coco",
+        "description": "Fazer cocozinho\r\n",
+        "frequency": "Diario",
+        "created_at": "2025-11-30T23:16:19.311587"
     }
 ]
