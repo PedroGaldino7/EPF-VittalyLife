@@ -7,14 +7,5 @@
         "frequency": "daily",
         "active": true,
         "created_at": "2025-11-24T23:23:56.788436"
-    },
-    {
-        "id": 2,
-        "user_id": "2",
-        "name": "meditacao",
-        "description": "Fazer meditacao diaria para acalmar os animos auqi ",
-        "frequency": "daily",
-        "active": true,
-        "created_at": "2025-11-24T23:25:21.973347"
     }
 ]
