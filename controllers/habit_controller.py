@@ -26,7 +26,7 @@ class HabitController(BaseController):
             return self.render('habits_form', habit=None, action='/habits/add')
         else:
             self.habit_service.save()
-            self.redirect('/habits')
+            self.redirect('/dashboard')
 
     def edit_habit(self, habit_id):
         habit = self.habit_service.get_by_id(habit_id)

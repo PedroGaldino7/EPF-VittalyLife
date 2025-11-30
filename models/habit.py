@@ -68,3 +68,7 @@ class HabitModel:
     def delete(self, habit_id):
         self.habits = [h for h in self.habits if h.id != habit_id]
         self._save()
+
+    def delete_by_user(self, user_id):
+        self.habits = [h for h in self.habits if h.user_id != user_id]
+        self._save()

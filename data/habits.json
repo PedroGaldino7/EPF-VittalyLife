@@ -1,11 +1,11 @@
 [
     {
-        "id": 1,
+        "id": 2,
         "user_id": "1",
-        "name": "academia",
-        "description": "Ir pra academia as 16hrs",
-        "frequency": "daily",
+        "name": "pagar boletos",
+        "description": "pagar todas as contas e os boletos",
+        "frequency": "Mensal",
         "active": true,
-        "created_at": "2025-11-24T23:23:56.788436"
+        "created_at": "2025-11-29T04:57:40.337063"
     }
 ]

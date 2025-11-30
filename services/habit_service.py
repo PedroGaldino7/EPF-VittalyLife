@@ -48,3 +48,6 @@ class HabitService:
 
     def delete(self, habit_id):
         self.habit_model.delete(habit_id)
+
+    def delete_by_user(self, user_id):
+        self.habit_model.delete_by_user(user_id)

@@ -20,4 +20,4 @@
 
 </form>
 
-<a href="/users">Voltar</a>
+<a href="/dashboard">Voltar</a>

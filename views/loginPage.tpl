@@ -20,8 +20,8 @@
             % end
 
             <div class="input-box">
-                <input type="text" name="username" placeholder="Username" required>
-                <i class='bx bxs-user'></i>
+                <input type="email" name="email" placeholder="Email" required>
+                <i class='bx bxs-envelope'></i>
             </div>
 
             <div class="input-box">
