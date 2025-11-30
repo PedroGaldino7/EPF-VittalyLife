@@ -1,7 +1,5 @@
-import json
-import os
 from datetime import datetime
-
+from models.base_model import BaseJsonModel  # <--- Importando o Pai
 
 class User:
     def __init__(self, id, username, email, password_hash, created_at=None, habits=None):
@@ -27,28 +25,23 @@ class User:
         return cls(**data)
 
 
-class UserModel:
-    FILE_PATH = "./data/users.json"
+class UserModel(BaseJsonModel):
+    file_path = "./data/users.json"
 
     def __init__(self):
-        self.users = self._load()
-
-    def _load(self):
-        if not os.path.exists(self.FILE_PATH):
-            return []
-        with open(self.FILE_PATH, "r", encoding="utf-8") as f:
-            return [User.from_dict(u) for u in json.load(f)]
+        raw_data = self._load_data()
+        self.users = [User.from_dict(u) for u in raw_data]
 
     def _save(self):
-        with open(self.FILE_PATH, "w", encoding="utf-8") as f:
-            json.dump([u.to_dict() for u in self.users], f, indent=4, ensure_ascii=False)
+        self._save_data([u.to_dict() for u in self.users])
 
     def get_all(self):
-        self.users = self._load()
+        raw_data = self._load_data()
+        self.users = [User.from_dict(u) for u in raw_data]
         return self.users
 
-
     def get_by_id(self, user_id):
+        self.get_all()
         return next((u for u in self.users if u.id == user_id), None)
 
     def add(self, user):

@@ -1,6 +1,5 @@
 from datetime import datetime
-import json
-import os
+from models.base_model import BaseJsonModel
 
 class Habit:
     def __init__(self, id, user_id, name, description, frequency, active=True, created_at=None):
@@ -26,30 +25,27 @@ class Habit:
         return cls(**data)
 
 
-class HabitModel:
-    FILE_PATH = "data/habits.json"
+class HabitModel(BaseJsonModel):
+    file_path = "./data/habits.json"
 
     def __init__(self):
-        self.habits = self._load()
-
-    def _load(self):
-        if not os.path.exists(self.FILE_PATH):
-            return []
-        with open(self.FILE_PATH, "r", encoding="utf-8") as f:
-            return [Habit.from_dict(item) for item in json.load(f)]
+        raw_data = self._load_data()
+        self.habits = [Habit.from_dict(item) for item in raw_data]
 
     def _save(self):
-        with open(self.FILE_PATH, "w", encoding="utf-8") as f:  
-            json.dump([h.to_dict() for h in self.habits], f, indent=4, ensure_ascii=False)
+        self._save_data([h.to_dict() for h in self.habits])
 
     def get_all(self):
-        self.habits = self._load()
+        raw_data = self._load_data()
+        self.habits = [Habit.from_dict(item) for item in raw_data]
         return self.habits
 
     def get_by_id(self, habit_id):
+        self.get_all()
         return next((h for h in self.habits if h.id == habit_id), None)
     
     def get_by_user(self, user_id):
+        self.get_all()
         return [h for h in self.habits if h.user_id == user_id]
 
     def add(self, habit):

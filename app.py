@@ -10,13 +10,12 @@ class App:
     def setup_routes(self):
         from controllers import init_controllers
 
-        print('🚀 Inicializa rotas!')
+        print('Inicializa rotas!')
         init_controllers(self.bottle)
 
     def run(self):
         self.setup_routes()
 
-        # 🚀 Este é o jeito certo:
         run(
             app=self.bottle,
             host=self.config.HOST,

@@ -37,7 +37,7 @@ class HabitController(BaseController):
                 "name": h.name,
                 "description": h.description,
                 "frequency": h.frequency,
-                "done": h.id in done_ids  # True ou False
+                "done": h.id in done_ids 
             })
 
         return self.render(

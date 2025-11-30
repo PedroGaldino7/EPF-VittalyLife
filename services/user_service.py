@@ -15,7 +15,7 @@ class UserService:
         return hashlib.sha256(password.encode()).hexdigest()
 
     def get_by_id(self, user_id):
-        self.user_model.users = self.user_model._load()
+        self.user_model.get_all() 
         return self.user_model.get_by_id(user_id)
     
     def save(self):
@@ -70,12 +70,11 @@ class UserService:
     def delete(self, user_id):
         self.user_model.delete(user_id)
 
-        # Apaga todos os hábitos do usuário
         from services.habit_service import HabitService
         HabitService().delete_by_user(user_id)
 
     def authenticate(self, email, password):
-        self.user_model.users = self.user_model._load()
+        self.user_model.get_all()
 
         password_hash = self.hash_password(password)
 
@@ -84,5 +83,3 @@ class UserService:
                 return u
 
         return None
-
-

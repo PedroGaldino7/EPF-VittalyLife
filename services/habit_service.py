@@ -16,8 +16,8 @@ class HabitService:
         return self.habit_model.get_by_id(habit_id)
     
     def get_by_user(self, user_id):
-        self.habits = self.habit_model._load()
-        return [h for h in self.habits if h.user_id == user_id]
+        self.habit_model.get_all()
+        return [h for h in self.habit_model.habits if h.user_id == user_id]
 
     def save(self):
         habits = self.habit_model.get_all()
@@ -51,7 +51,6 @@ class HabitService:
         HabitLogService().delete_logs_from_habit(habit_id)
 
         self.habit_model.delete(habit_id)
-
 
     def delete_by_user(self, user_id):
         self.habit_model.delete_by_user(user_id)

@@ -16,7 +16,6 @@ class BaseController:
         self.app.route('/cadPage', method='GET', callback=self.cad_page)
         self.app.route('/helper', method=['GET'], callback=self.helper)
 
-        # Rota para arquivos estáticos (CSS, JS, imagens)
         self.app.route('/static/<filename:path>', callback=self.serve_static)
 
 

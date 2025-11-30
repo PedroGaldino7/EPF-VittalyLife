@@ -14,5 +14,29 @@
         "password_hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
         "created_at": "2025-11-29T16:35:00.904049",
         "habits": []
+    },
+    {
+        "id": 3,
+        "username": "Lucas Menezes",
+        "email": "lucasfolha418@gmail.com",
+        "password_hash": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "created_at": "2025-11-30T17:11:14.741374",
+        "habits": []
+    },
+    {
+        "id": 4,
+        "username": "Lucas Menezes",
+        "email": "lucasfolha418@gmail.com",
+        "password_hash": "50fc646b69c75acb5b16b706cd12b198db2fd7d1e1a4707d9bc8486088cfa459",
+        "created_at": "2025-11-30T17:12:03.526360",
+        "habits": []
+    },
+    {
+        "id": 5,
+        "username": "teste1",
+        "email": "lucasfolha418@gmail.com",
+        "password_hash": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
+        "created_at": "2025-11-30T17:15:07.382965",
+        "habits": []
     }
 ]

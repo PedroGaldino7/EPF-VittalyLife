@@ -1,7 +1,5 @@
-import json
-import os
-from datetime import datetime, date
-
+from datetime import date
+from models.base_model import BaseJsonModel
 
 class HabitLog:
     def __init__(self, id, habit_id, user_id, log_date, done):
@@ -25,28 +23,24 @@ class HabitLog:
         return cls(**data)
 
 
-class HabitLogModel:
-    FILE_PATH = "./data/habits_log.json"
+class HabitLogModel(BaseJsonModel):
+    file_path = "./data/habits_log.json"
 
     def __init__(self):
-        self.logs = self._load()
-
-    def _load(self):
-        if not os.path.exists(self.FILE_PATH):
-            return []
-        with open(self.FILE_PATH, "r", encoding="utf-8") as f:
-            return [HabitLog.from_dict(l) for l in json.load(f)]
+        raw_data = self._load_data()
+        self.logs = [HabitLog.from_dict(l) for l in raw_data]
 
     def _save(self):
-        with open(self.FILE_PATH, "w", encoding="utf-8") as f:
-            json.dump([l.to_dict() for l in self.logs], f, indent=4, ensure_ascii=False)
+        self._save_data([l.to_dict() for l in self.logs])
 
     def add(self, log):
         self.logs.append(log)
         self._save()
 
     def get_today_by_habit(self, habit_id, user_id):
-        self.logs = self._load()
+        raw_data = self._load_data()
+        self.logs = [HabitLog.from_dict(l) for l in raw_data]
+        
         today = date.today().isoformat()
         return next(
             (l for l in self.logs
@@ -55,9 +49,20 @@ class HabitLogModel:
         )
 
     def get_by_user(self, user_id):
-        self.logs = self._load()
+        raw_data = self._load_data()
+        self.logs = [HabitLog.from_dict(l) for l in raw_data]
         return [l for l in self.logs if l.user_id == user_id]
     
     def delete_by_habit(self, habit_id):
         self.logs = [l for l in self.logs if l.habit_id != habit_id]
         self._save()
+    
+    def get_today_user_logs(self, user_id):
+
+        raw_data = self._load_data()
+        self.logs = [HabitLog.from_dict(l) for l in raw_data]
+        today = date.today().isoformat()
+        return [
+            l for l in self.logs
+            if l.user_id == user_id and l.log_date == today
+        ]
