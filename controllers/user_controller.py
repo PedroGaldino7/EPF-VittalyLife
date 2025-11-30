@@ -16,8 +16,14 @@ class UserController(BaseController):
         self.app.route('/users/delete/<user_id:int>', method='POST', callback=self.delete_user)
 
     def list_users(self):
-        users = self.user_service.get_all()
-        return self.render('users', users=users)
+        def list_users(self):
+            current_user = self.get_logged_user()
+
+            if not current_user or not current_user.is_admin:
+                return self.redirect('/dashboard')
+
+            users = self.user_service.get_all()
+            return self.render('users', users=users)
 
     def add_user(self):
         if request.method == 'GET':

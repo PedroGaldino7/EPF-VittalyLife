@@ -25,14 +25,11 @@ class DashboardController(BaseController):
 
         user_id = int(user_id)
 
-        # pega hábitos do usuário
         habits = self.habit_service.get_by_user(user_id)
 
-        # pega logs de hoje
         today_logs = self.log_service.get_today_user_logs(user_id)
         done_ids = {log.habit_id for log in today_logs}
 
-        # filtra pendentes (os que NÃO estão em done_ids)
         pending = [h for h in habits if h.id not in done_ids]
 
         return self.render(

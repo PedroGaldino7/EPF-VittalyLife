@@ -82,7 +82,17 @@
             <div class="menuDivRight">
                 <div class="opcDivRight"><a href="habits">Listar todas as tarefas</a></div>
                 <div class="opcDivRight"><a href="habits/add">Criar tarefas</a></div>
-                <div class="opcDivRight"><a href="desempenho.html">Gráficos de desempenho</a></div>
+
+                <div class="opcDivRight" style="background-color: #e74c3c;">
+                    <a href="/relatorio/pdf" target="_blank">📄 Baixar Relatório PDF</a>
+                </div>
+                
+                % if user.is_admin:
+                <div class="opcDivRight" style="background-color: #e67e22;">
+                    <a href="/users">👑 Gerenciar Usuários</a>
+                </div>
+                % end
+
                 <div class="opcDivRight">Configurações da conta</div>
             </div>
         </div>

@@ -1,4 +1,3 @@
-# services/habit_service.py
 from bottle import request
 from models.habit import HabitModel, Habit
 from services.habit_log_service import HabitLogService

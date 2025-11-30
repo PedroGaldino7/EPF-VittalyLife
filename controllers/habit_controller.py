@@ -1,4 +1,3 @@
-# controllers/habit_controller.py
 from bottle import Bottle, request
 from .base_controller import BaseController
 from services.habit_service import HabitService
@@ -29,7 +28,6 @@ class HabitController(BaseController):
         today_logs = self.habit_log_service.get_today_user_logs(user_id)
         done_ids = {log.habit_id for log in today_logs}
 
-        # criar nova lista com status
         habits_with_status = []
         for h in habits:
             habits_with_status.append({

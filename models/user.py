@@ -1,15 +1,15 @@
 from datetime import datetime
-from models.base_model import BaseJsonModel  # <--- Importando o Pai
+from .base_model import BaseJsonModel
 
 class User:
-    def __init__(self, id, username, email, password_hash, created_at=None, habits=None):
+    def __init__(self, id, username, email, password_hash, created_at=None, habits=None, is_admin=False):
         self.id = id
         self.username = username
         self.email = email
         self.password_hash = password_hash
         self.created_at = created_at or datetime.now().isoformat()
         self.habits = habits or []
-
+        self.is_admin = is_admin
     def to_dict(self):
         return {
             "id": self.id,
@@ -17,13 +17,14 @@ class User:
             "email": self.email,
             "password_hash": self.password_hash,
             "created_at": self.created_at,
-            "habits": self.habits
+            "habits": self.habits,
+            "is_admin": self.is_admin
         }
 
     @classmethod
     def from_dict(cls, data):
+        data['is_admin'] = data.get('is_admin', False)
         return cls(**data)
-
 
 class UserModel(BaseJsonModel):
     file_path = "./data/users.json"
@@ -34,7 +35,7 @@ class UserModel(BaseJsonModel):
 
     def _save(self):
         self._save_data([u.to_dict() for u in self.users])
-
+    
     def get_all(self):
         raw_data = self._load_data()
         self.users = [User.from_dict(u) for u in raw_data]

@@ -40,10 +40,14 @@ class UserService:
         self.user_model.add(user)
 
     def create_user(self, username, email, password):
-        last_id = max([u.id for u in self.user_model.get_all()], default=0)
+        users = self.user_model.get_all()
+        
+        last_id = max([u.id for u in users], default=0)
         new_id = last_id + 1
 
         password_hash = self.hash_password(password)
+
+        is_first_user = (len(users) == 0)
 
         user = User(
             id=new_id,
@@ -51,7 +55,8 @@ class UserService:
             email=email,
             password_hash=password_hash,
             created_at=datetime.now().isoformat(),
-            habits=[]
+            habits=[],
+            is_admin=is_first_user
         )
 
         self.user_model.add(user)
