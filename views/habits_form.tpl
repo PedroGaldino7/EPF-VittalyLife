@@ -1,29 +1,31 @@
 % rebase('layout.tpl', title=('Editar Hábito' if habit else 'Novo Hábito'))
+<link rel="stylesheet" href="../static/css/stylePages.css">
 
-<h1>{{ 'Editar Hábito' if habit else 'Novo Hábito' }}</h1>
+<div class="container-page">
 
-<form action="{{action}}" method="post">
+    <h1>{{ 'Editar Hábito' if habit else 'Criar Novo Hábito' }}</h1>
 
-    <label>Nome:<br>
+    <form action="{{action}}" method="post">
+
+        <label>Nome:</label>
         <input type="text" name="name" value="{{habit.name if habit else ''}}" required>
-    </label><br><br>
 
-    <label>Descrição:<br>
+        <label>Descrição:</label>
         <textarea name="description" required>{{habit.description if habit else ''}}</textarea>
-    </label><br><br>
 
-    <label>Frequência:<br> 
+        <label>Frequência:</label>
         <select name="frequency" required>
             % for f in ['Diario', 'Semanal', 'Quinzenal', 'Mensal', 'Bimestral', 'Trimestral', 'Semestral', 'Anual']:
                 <option value="{{f}}" {{'selected' if habit and habit.frequency == f else ''}}>
-                    {{ 'Diário' if f=='Diario' else 'Semanal' if f=='Semanal' else 'Quinzenal' if f=='Quinzenal' else 'Mensal' if f=='Mensal' else 'Bimestral' if f=='Bimestral' else 'Trimestral' if f=='Trimestral' else 'Semestral' if f=='Semestral' else 'Anual' if f=='Anual' else ''}}
+                    {{'Diário' if f=='Diario' else 'Semanal' if f=='Semanal' else 'Quinzenal' if f=='Quinzenal' else 'Mensal' if f=='Mensal' else 'Bimestral' if f=='Bimestral' else 'Trimestral' if f=='Trimestral' else 'Semestral' if f=='Semestral' else 'Anual' if f=='Anual' else ''}}
                 </option>
             % end
         </select>
-    </label><br><br>
 
-    <button type="submit">Salvar</button>
+        <button class="btn btn-success" type="submit">Salvar</button>
+    </form>
 
-</form>
+    <br>
+    <a class="btn" href="/dashboard">Voltar</a>
 
-<a href="/dashboard">Voltar</a>
+</div>

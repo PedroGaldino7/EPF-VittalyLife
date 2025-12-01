@@ -1,5 +1,7 @@
 % rebase('layout.tpl', title='Hábitos')
 
+<link rel="stylesheet" href="../static/css/stylePages.css">
+
 <h1>Hábitos</h1>
 
 <table border="1">

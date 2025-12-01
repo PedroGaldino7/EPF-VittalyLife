@@ -33,8 +33,7 @@ class UserService:
             username=username,
             email=email,
             password_hash=password_hash,
-            created_at=datetime.now().isoformat(),
-            habits=[]
+            created_at=datetime.now().isoformat()
         )
 
         self.user_model.add(user)
@@ -55,7 +54,6 @@ class UserService:
             email=email,
             password_hash=password_hash,
             created_at=datetime.now().isoformat(),
-            habits=[],
             is_admin=is_first_user
         )
 
