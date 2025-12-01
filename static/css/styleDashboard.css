@@ -176,27 +176,15 @@ section{
 circle{
     fill: none;
     stroke: url(#GradientColor);
-    /* stroke: rgb(179, 179, 179); */
     stroke-width: 20px;
     stroke-dasharray: 691;
     stroke-dashoffset: 691;
-    animation: anim 3s linear forwards;
 }
 
 svg{
     position: absolute;
     top: 0;
     left: 0;
-}
-
-@keyframes anim{
-    from{
-        stroke-dashoffset: 691;
-    }
-    to{
-        /* stroke-dashoffset: calc(691 - (691 * 0.70); */
-        stroke-dashoffset: 207.3;
-    }
 }
 
 .leftDiv .streakDiv .fraseStreak{

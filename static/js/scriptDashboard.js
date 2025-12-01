@@ -1,26 +1,31 @@
-let number = document.getElementById("number");
-let counter = 0;
+document.addEventListener("DOMContentLoaded", function() {
+    let number = document.getElementById("number");
+    let circle = document.querySelector("circle");
+    
+    let valorFinal = document.getElementById("progressoReal").value;
+    valorFinal = parseInt(valorFinal); 
+    let counter = 0;
+    
+    const circumference = 691; 
+    
+    circle.style.strokeDashoffset = circumference;
 
-setInterval(() => {
-    if (counter == 70) {
-        clearInterval();
-    }else{
-        counter += 1;
-        number.innerHTML = counter + "%";
+    if (valorFinal === 0) {
+        number.innerHTML = "0%";
+        return;
     }
 
-}, 42);
-
-const btnUser = document.getElementById("btnUser");
-const userDropdown = document.getElementById("userDropdown");
-
-btnUser.addEventListener("click", () => {
-    userDropdown.style.display =
-        userDropdown.style.display === "block" ? "none" : "block";
-});
-
-document.addEventListener("click", (e) => {
-    if (!btnUser.contains(e.target) && !userDropdown.contains(e.target)) {
-        userDropdown.style.display = "none";
-    }
+    let interval = setInterval(() => {
+        if (counter >= valorFinal) {
+            clearInterval(interval);
+        } else {
+            counter += 1;
+            number.innerHTML = counter + "%";
+            
+            const offset = circumference - (valorFinal * circumference) / 100;
+            
+            circle.style.transition = "stroke-dashoffset 2s ease-in-out";
+            circle.style.strokeDashoffset = offset;
+        }
+    }, 20);
 });

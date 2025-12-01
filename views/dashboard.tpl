@@ -93,7 +93,9 @@
                 </div>
                 % end
 
-                <div class="opcDivRight">Configurações da conta</div>
+                <div class="opcDivRight">
+                    <a href="/users/edit/{{user.id}}">Configurações da conta</a>
+                </div>
             </div>
         </div>
     </section>
@@ -101,6 +103,8 @@
     <footer>
 
     </footer>
+
+    <input type="hidden" id="progressoReal" value="{{porcentagem}}">
 
     <script src="../static/js/scriptDashboard.js"></script>
 </body>

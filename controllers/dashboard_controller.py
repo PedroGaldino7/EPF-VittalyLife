@@ -26,14 +26,22 @@ class DashboardController(BaseController):
         user_id = int(user_id)
 
         habits = self.habit_service.get_by_user(user_id)
-
         today_logs = self.log_service.get_today_user_logs(user_id)
         done_ids = {log.habit_id for log in today_logs}
 
         pending = [h for h in habits if h.id not in done_ids]
 
+        total = len(habits)
+        concluidos = len(done_ids)
+        
+        if total > 0:
+            porcentagem = int((concluidos / total) * 100)
+        else:
+            porcentagem = 0
+
         return self.render(
             "dashboard",
             user=self.get_user(user_id),
-            pending_habits=pending
+            pending_habits=pending,
+            porcentagem=porcentagem
         )
