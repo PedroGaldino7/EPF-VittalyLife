@@ -7,23 +7,5 @@
         "created_at": "2025-11-30T22:29:22.504929",
         "habits": [],
         "is_admin": true
-    },
-    {
-        "id": 2,
-        "username": "Pedro Galdino",
-        "email": "pedro@gmail.com",
-        "password_hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-        "created_at": "2025-11-30T22:30:07.968580",
-        "habits": [],
-        "is_admin": false
-    },
-    {
-        "id": 3,
-        "username": "Galdino",
-        "email": "galdino@gmail.com",
-        "password_hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-        "created_at": "2025-11-30T23:16:53.741244",
-        "habits": [],
-        "is_admin": false
     }
 ]
