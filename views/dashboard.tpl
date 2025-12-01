@@ -57,9 +57,9 @@
 
 
                 </div>
-                <div class="fraseStreak">
-                    <p>Vamos lá, você está quase completando a ofensiva, força !!</p>
-                </div>
+                    <div class="fraseStreak">
+                        <p id="mensagemMotivacional"></p>
+                    </div>  
             </div>
             <div class="taskPendenteDiv">
                 % if pending_habits:
@@ -94,7 +94,7 @@
                 % end
 
                 <div class="opcDivRight">
-                    <a href="/users/edit/{{user.id}}">Configurações da conta</a>
+                    <a href="/users/edit/{{user.id}}">Configurações de usuário</a>
                 </div>
             </div>
         </div>
