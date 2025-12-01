@@ -2,13 +2,12 @@ from datetime import datetime
 from .base_model import BaseJsonModel
 
 class User:
-    def __init__(self, id, username, email, password_hash, created_at=None, habits=None, is_admin=False):
+    def __init__(self, id, username, email, password_hash, created_at=None, is_admin=False):
         self.id = id
         self.username = username
         self.email = email
         self.password_hash = password_hash
         self.created_at = created_at or datetime.now().isoformat()
-        self.habits = habits or []
         self.is_admin = is_admin
     def to_dict(self):
         return {
@@ -17,7 +16,6 @@ class User:
             "email": self.email,
             "password_hash": self.password_hash,
             "created_at": self.created_at,
-            "habits": self.habits,
             "is_admin": self.is_admin
         }
 

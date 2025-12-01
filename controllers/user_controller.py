@@ -16,7 +16,6 @@ class UserController(BaseController):
         self.app.route('/users/delete/<user_id:int>', method='POST', callback=self.delete_user)
 
     def list_users(self):
-
         current_user = self.get_logged_user()
 
         if not current_user or not current_user.is_admin:
@@ -26,23 +25,42 @@ class UserController(BaseController):
         return self.render('users', users=users)
 
     def add_user(self):
+        current_user = self.get_logged_user()
+
+        if not current_user or not current_user.is_admin:
+            return self.redirect('/dashboard')
+
         if request.method == 'GET':
-            return self.render('user_form', user=None, action="/users/add")
-        else:
-            self.user_service.save()
-            self.redirect('/users')
+            return self.render("criar_usuario")
+
+        self.user_service.save()
+        return self.redirect('/users')
 
     def edit_user(self, user_id):
+        current_user = self.get_logged_user()
+
+        if not current_user:
+            return self.redirect('/login')
+
+        if not current_user.is_admin and current_user.id != user_id:
+            return self.redirect('/dashboard')
+
         user = self.user_service.get_by_id(user_id)
+
         if request.method == 'GET':
-            return self.render('user_form', user=user, action=f"/users/edit/{user_id}")
-        else:
-            self.user_service.edit(user)
-            self.redirect('/users')
+            return self.render("editar_usuario", user=user, logged_user=current_user)
+
+        self.user_service.edit(user)
+        return self.redirect('/users' if current_user.is_admin else '/dashboard')
 
     def delete_user(self, user_id):
+        current_user = self.get_logged_user()
+
+        if not current_user or not current_user.is_admin:
+            return self.redirect('/dashboard')
+
         self.user_service.delete(user_id)
-        self.redirect('/users')
+        return self.redirect('/users')
 
 
 user_routes = Bottle()

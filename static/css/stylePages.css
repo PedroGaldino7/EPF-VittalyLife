@@ -1,0 +1,127 @@
+body {
+    /* background-color: rgba(70, 114, 189, 0.747); */
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    padding: 20px;
+}
+
+.container-page {
+    width: 80%;
+    margin: 40px auto;
+    background: rgba(197, 197, 197, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+}
+
+.container-page h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.cards{
+    /* border: 1px solid red; */
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#card{
+    /* border: 1px solid red; */
+    display: flex;
+    padding: 7px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#btnExc{
+        background: rgba(154, 16, 16, 0.803);
+    /* background: rgba(149, 31, 31, 0.832); */
+    color: white;
+    border: none;
+    padding: 5px 9px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 1s;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#btnCheckin{
+    background: rgba(83, 169, 3, 0.803);
+    /* background: rgba(149, 31, 31, 0.832); */
+    color: white;
+    border: none;
+    padding: 5px 9px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#editHabit{
+    background-color: blue;
+    border-radius: 8px;
+    padding: 5px 9px;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+}
+
+#btnExc:hover, #btnCheckin:hover {
+    transform: scale(1.05);
+}
+
+#editHabit:hover{
+    background-color: rgba(0, 0, 255, 0.756);
+    text-decoration: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, select, textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid gray;
+    font-size: 15px;
+    outline: none;
+    color: black;
+}
+
+label {
+    font-weight: bold;
+}
+
+.cardTaskPendente {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px;
+    height: 21vh;
+    width: 21vh;
+    margin-left: 30px;
+}
+
+#voltarDash{
+    /* border: 1px solid red; */
+    text-decoration: none;
+    color: black;
+    display: flex;
+    width: 28vh;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#voltarDash:hover{
+    text-decoration: underline;
+}

@@ -45,7 +45,7 @@ class HabitController(BaseController):
 
     def add_habit(self):
         if request.method == 'GET':
-            return self.render('habits_form', habit=None, action='/habits/add')
+            return self.render("criar_habito")
         else:
             self.habit_service.save()
             self.redirect('/dashboard')
@@ -53,7 +53,7 @@ class HabitController(BaseController):
     def edit_habit(self, habit_id):
         habit = self.habit_service.get_by_id(habit_id)
         if request.method == 'GET':
-            return self.render('habits_form', habit=habit, action=f'/habits/edit/{habit_id}')
+            return self.render("editar_habito", habit=habit)
         else:
             self.habit_service.edit(habit)
             self.redirect('/habits')
