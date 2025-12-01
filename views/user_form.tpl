@@ -1,4 +1,5 @@
 % rebase('layout.tpl', title=('Editar Usuário' if user else 'Novo Usuário'))
+<link rel="stylesheet" href="../static/css/stylePages.css">
 
 <h1>{{ 'Editar Usuário' if user else 'Novo Usuário' }}</h1>
 
@@ -20,4 +21,4 @@
 
 </form>
 
-<a href="/dashboard">Voltar</a>
+<a href="/dashboard">Voltar</a> 

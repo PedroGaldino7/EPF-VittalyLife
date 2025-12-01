@@ -1,5 +1,12 @@
-% rebase('layout.tpl', title='Usuários')
-<link rel="stylesheet" href="../static/css/stylePages.css">
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/stylePages.css">
+    <title>Alterar Dados</title>
+</head>
+<body>
 
 <div class="container-page">
 
@@ -44,3 +51,6 @@
     <a class="btn" href="/dashboard">Voltar</a>
 
 </div>
+
+</body>
+</html>

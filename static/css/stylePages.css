@@ -1,57 +1,60 @@
-/* ---------- STYLE GLOBAL (igual ao dashboard) ---------- */
-
 body {
-    background-color: rgba(70, 114, 189, 0.747);
+    /* background-color: rgba(70, 114, 189, 0.747); */
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: black;
     padding: 20px;
 }
 
 .container-page {
     width: 80%;
     margin: 40px auto;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(197, 197, 197, 0.1);
     backdrop-filter: blur(12px);
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 30px rgba(0,0,0,0.2);
 }
 
-/* ---------- TÍTULOS ---------- */
 .container-page h1 {
     text-align: center;
     margin-bottom: 25px;
     font-size: 28px;
 }
 
-/* ---------- TABELAS ---------- */
-.table {
+.cards{
+    /* border: 1px solid red; */
+    display: flex;
     width: 100%;
-    border-collapse: collapse;
-    border-radius: 10px;
-    overflow: hidden;
+    flex-wrap: wrap;
 }
 
-.table th {
-    background: rgba(255, 255, 255, 0.15);
-    padding: 12px;
+#card{
+    /* border: 1px solid red; */
+    display: flex;
+    padding: 7px;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
-.table td {
-    padding: 12px;
-    background: rgba(255, 255, 255, 0.08);
-}
-
-.table tr:hover td {
-    background: rgba(255, 255, 255, 0.20);
-}
-
-/* ---------- BOTÕES ---------- */
-.btn {
-    background: rgba(255, 255, 255, 0.2);
+#btnExc{
+        background: rgba(154, 16, 16, 0.803);
+    /* background: rgba(149, 31, 31, 0.832); */
     color: white;
     border: none;
-    padding: 10px 18px;
+    padding: 5px 9px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 1s;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#btnCheckin{
+    background: rgba(83, 169, 3, 0.803);
+    /* background: rgba(149, 31, 31, 0.832); */
+    color: white;
+    border: none;
+    padding: 5px 9px;
     border-radius: 8px;
     cursor: pointer;
     transition: .3s;
@@ -59,28 +62,25 @@ body {
     text-decoration: none;
 }
 
-.btn:hover {
-    background: rgba(255, 255, 255, 0.35);
+#editHabit{
+    background-color: blue;
+    border-radius: 8px;
+    padding: 5px 9px;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+}
+
+#btnExc:hover, #btnCheckin:hover {
     transform: scale(1.05);
 }
 
-.btn-danger {
-    background: rgba(255, 80, 80, 0.6);
+#editHabit:hover{
+    background-color: rgba(0, 0, 255, 0.756);
+    text-decoration: underline;
 }
-
-.btn-danger:hover {
-    background: rgba(255, 80, 80, 0.8);
-}
-
-.btn-success {
-    background: rgba(80, 255, 120, 0.5);
-}
-
-.btn-success:hover {
-    background: rgba(80, 255, 120, 0.7);
-}
-
-/* ---------- FORMULÁRIOS ---------- */
 
 form {
     display: flex;
@@ -91,18 +91,15 @@ form {
 input, select, textarea {
     padding: 12px;
     border-radius: 8px;
-    border: none;
+    border: 1px solid gray;
     font-size: 15px;
     outline: none;
-    background: rgba(255, 255, 255, 0.2);
     color: black;
 }
 
 label {
     font-weight: bold;
 }
-
-/* ---------- CARD DE TAREFA PENDENTE ---------- */
 
 .cardTaskPendente {
     display: flex;
@@ -113,4 +110,18 @@ label {
     height: 21vh;
     width: 21vh;
     margin-left: 30px;
+}
+
+#voltarDash{
+    /* border: 1px solid red; */
+    text-decoration: none;
+    color: black;
+    display: flex;
+    width: 28vh;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#voltarDash:hover{
+    text-decoration: underline;
 }
