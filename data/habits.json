@@ -1,26 +1,26 @@
 [
     {
         "id": 1,
-        "user_id": 1,
-        "name": "Fazer xixi",
-        "description": "Fazer xixizinho",
-        "frequency": "Diario",
-        "created_at": "2025-11-30T23:15:30.453961"
-    },
-    {
-        "id": 2,
-        "user_id": 1,
-        "name": "Lavar a roupa",
-        "description": "Lavar a roupa no telhado",
-        "frequency": "Diario",
-        "created_at": "2025-11-30T23:15:53.337002"
+        "user_id": 2,
+        "name": "pagar boletos",
+        "description": "pagar boletos",
+        "frequency": "Mensal",
+        "created_at": "2025-12-01T01:30:47.140491"
     },
     {
         "id": 3,
-        "user_id": 1,
-        "name": "Fazer coco",
-        "description": "Fazer cocozinho\r\n",
+        "user_id": 2,
+        "name": "meditacao",
+        "description": "meditar 30 min ",
         "frequency": "Diario",
-        "created_at": "2025-11-30T23:16:19.311587"
+        "created_at": "2025-12-01T01:31:18.363933"
+    },
+    {
+        "id": 4,
+        "user_id": 2,
+        "name": "academia",
+        "description": "Ir para a academia as 15hrs",
+        "frequency": "Semanal",
+        "created_at": "2025-12-01T01:31:37.299338"
     }
 ]

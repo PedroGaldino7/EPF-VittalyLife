@@ -19,10 +19,14 @@
         <td>{{u.email}}</td>
         <td>{{u.created_at}}</td>
         <td>
-            <a href="/users/edit/{{u.id}}">Editar</a>
-            <form action="/users/delete/{{u.id}}" method="post" style="display:inline;">
-                <button type="submit">Excluir</button>
-            </form>
+            % if u.is_admin == True:
+                <span>Administrador</span>
+            % else:
+                <a href="/users/edit/{{u.id}}">Editar</a>
+                <form action="/users/delete/{{u.id}}" method="post" style="display:inline;">
+                    <button type="submit">Excluir</button>
+                </form>
+            % end
         </td>
     </tr>
     % end

@@ -94,7 +94,7 @@
                 % end
 
                 <div class="opcDivRight">
-                    <a href="/users/edit/{{user.id}}">Configurações da conta</a>
+                    <a href="/users/edit/{{user.id}}">Configurações de usuário</a>
                 </div>
             </div>
         </div>

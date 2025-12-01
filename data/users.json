@@ -1,19 +1,28 @@
 [
     {
         "id": 1,
-        "username": "Lucas Menezes",
-        "email": "lucasfolha418@gmail.com",
-        "password_hash": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
-        "created_at": "2025-11-30T19:14:23.230908",
+        "username": "ADM",
+        "email": "adm@gmail.com",
+        "password_hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "created_at": "2025-11-30T22:29:22.504929",
         "habits": [],
         "is_admin": true
     },
     {
         "id": 2,
-        "username": "teste1",
-        "email": "Teste@123",
-        "password_hash": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
-        "created_at": "2025-11-30T19:17:02.445023",
+        "username": "pedro",
+        "email": "pedro@gmail.com",
+        "password_hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "created_at": "2025-11-30T22:30:07.968580",
+        "habits": [],
+        "is_admin": false
+    },
+    {
+        "id": 3,
+        "username": "Galdino",
+        "email": "galdino@gmail.com",
+        "password_hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "created_at": "2025-11-30T23:16:53.741244",
         "habits": [],
         "is_admin": false
     }
